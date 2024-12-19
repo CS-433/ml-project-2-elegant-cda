@@ -28,15 +28,15 @@ python main.py --help
 ```
 For example, running the command 
 ```
-python main.py -m CNN -t clf -d 1 -s True -r True
+python main.py -m CNN -t clf -d 2 -s True -r True
 ```
-will run the classification CNN training using data from drug 1, and will test it on a reproducible, random test split also from drug 1.
+will run the classification CNN training using data from drug 2, and will test it on a reproducible, random test split also from drug 2.
 
 To modify the hyperparameters for a CNN model training, edit the values in the appropriate dictionary in `config.py`:
 
-  `CNN_CLF_CONFIG`: hyperparameters used for classification. Currently set as the hyperparameters values optimal for drug 1 training.
+  `CNN_CLF_CONFIG`: hyperparameters used for classification. Currently set as the hyperparameters values optimal for drug 2 training.
 
-  `CNN_REG_CONFIG`: hyperparameters used for regression. Currently set as the hyperparameters values optimal for drug 1 training.
+  `CNN_REG_CONFIG`: hyperparameters used for regression. Currently set as the hyperparameters values optimal for drug 2 training.
 
   `GRID_SEARCH_REG`: the set of hyperparameters tested in fine-tuning for the classification task.
 

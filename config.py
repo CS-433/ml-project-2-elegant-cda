@@ -4,7 +4,7 @@ DEATH_THRESHOLD = 2.5
 DEATH_LENGTH = 1300
 
 CNN_CLF_CONFIG = {
-    "lr" : 1e-4,
+    "lr" : 1e-5,
     "weight_decay" : 1e-5,
     "epochs": 500,
     "threshold" : 0.4, # Decision threshold between null and unity label ([0,1])
@@ -14,12 +14,12 @@ CNN_CLF_CONFIG = {
     "early_stopping_thresold" : None,
     "criterion" : torch.nn.BCEWithLogitsLoss(),    
     "hidden_layer_K" : 16,
-    "hidden_layer_L" : 1,
+    "hidden_layer_L" : 2,
 }
 
 CNN_REG_CONFIG = {
-    "lr" : 1e-5,
-    "weight_decay" : 1e-5,
+    "lr" : 1e-3,
+    "weight_decay" : 1e-3,
     "epochs": 500,
     "threshold" : None, # Decision threshold between null and unity
     "device" : torch.device("cuda" if torch.cuda.is_available() else "cpu"),
@@ -28,7 +28,7 @@ CNN_REG_CONFIG = {
     "early_stopping_thresold" : 0.5,
     "criterion" : torch.nn.MSELoss(),  
     "hidden_layer_K" : 64,
-    "hidden_layer_L" : 1,
+    "hidden_layer_L" : 2,
 }
 
 GRID_SEARCH_REG = {
