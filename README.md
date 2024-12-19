@@ -2,16 +2,15 @@
 
 (For those who are confused why everything is pushed in a single commit, this is because we have included confidential information of the drugs in the initial stages of the project and hence we have to remove the commit history for condifential concerns)
 ## Overview
-This repository contains the code of CS 433 Machine Learning Project 2. In this project, we utilise different machine learning models to disguish c. elegans treated with drugs from those not and predict lifespan of c. elegans, 
-using early behavioral data, in specific, x-y coordinates of center of mass in the first 2 days.
+This repository contains the code of CS 433 Machine Learning Project 2. In this project, we utilise different machine learning models to disguish C. elegans worms treated with drugs from those not, and predict lifespan of these worms using early behavioral data, in specific, x-y coordinates of center of mass in the first 2 days.
 
 Note: As the data set is small, we decided to include it in this repository. Users can directly run the code without extra steps to download the data
 
 ## Installation
 To get started, clone this repository:
 ```
-git clone https://github.com/DanielSinTY/MLProject2.git
-cd MLProject2
+git clone https://github.com/CS-433/ml-project-2-elegant-cda.git
+cd ml-project-2-elegant-cda
 ```
 and install the dependencies:
 ```
@@ -27,7 +26,13 @@ This command contains various arguments to be set by the users, for different ta
 ```
 python main.py --help
 ```
-To modify the hyperparameters for a CNN model training, edit the appropriate dictionary in `config.py`:
+For example, running the command 
+```
+python main.py -m CNN -t clf -d 1 -s True -r True
+```
+will run the classification CNN training using data from drug 1, and will test it on a reproducible, random test split also from drug 1.
+
+To modify the hyperparameters for a CNN model training, edit the values in the appropriate dictionary in `config.py`:
 
   `CNN_CLF_CONFIG`: hyperparameters used for classification. Currently set as the hyperparameters values optimal for drug 1 training.
 
